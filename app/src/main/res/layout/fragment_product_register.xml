@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".register.ProductRegister">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+
+       <Spinner
+           android:id="@+id/customerSpinner"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="64dp"
+           android:minHeight="48dp"
+           android:contentDescription="Customer Name" />
+
+       <EditText
+           android:id="@+id/nameEditText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Product name"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="16dp"
+           android:minHeight="48dp" />
+
+       <DatePicker
+           android:id="@+id/datePicker"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:calendarViewShown="false"
+           android:datePickerMode="spinner"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="16dp" />
+
+       <RadioGroup
+           android:id="@+id/statusRadioGroup"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="16dp">
+
+           <RadioButton
+               android:id="@+id/activeRadioButton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Active"
+               android:checked="true"
+               android:minHeight="48dp"/>
+
+           <RadioButton
+               android:id="@+id/inactiveRadioButton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Inactive"
+               android:minHeight="48dp"/>
+       </RadioGroup>
+
+       <Button
+           android:id="@+id/registerButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Register"
+           android:layout_gravity="center_horizontal|bottom"
+           android:layout_marginTop="16dp" />
+   </LinearLayout>
 
 </FrameLayout>
